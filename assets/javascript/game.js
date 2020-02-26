@@ -7,7 +7,6 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var letter = [];
-var eachofLetters = null;
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -27,6 +26,7 @@ document.onkeyup = function(event) {
      //Randomly chooses a choice from the options array. This is the computer's guess.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
+    //Defining user choices
     var options = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     
     if (options.indexOf(userGuess) > -1) {
