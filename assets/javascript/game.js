@@ -29,18 +29,24 @@ document.onkeyup = function(event) {
     //Defining user choices
     var options = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     
+    //What happens when a letter is chosen
     if (options.indexOf(userGuess) > -1) {
 
+        //If user wins
         if (userGuess === computerGuess) {
             wins++;
             guessesLeft = 9;
             letter = [];
         }
 
+        //If user does not guess correct letter
         if (userGuess !== computerGuess) {
             guessesLeft --;
             letter.push(userGuess);
+
         }
+
+        //If user runs out of guesses
          if (guessesLeft === 0) {
              guessesLeft = 9;
              losses ++;
@@ -49,6 +55,8 @@ document.onkeyup = function(event) {
     }
    
 
+
+    //Displaying results
    winsText.textContent = "Wins: " + wins;
    lossesText.textContent = "Losses: " + losses;
    guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
