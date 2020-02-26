@@ -7,6 +7,7 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 9;
 var letter = [];
+var eachofLetters = null;
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
@@ -40,12 +41,11 @@ document.onkeyup = function(event) {
             guessesLeft --;
             letter.push(userGuess);
         }
-
-        if (guessesLeft === 0) {
-            guessesLeft = 9;
-            losses ++;
-            letter = []
-        }
+         if (guessesLeft === 0) {
+             guessesLeft = 9;
+             losses ++;
+             letter = [];
+         }
     }
    
 
