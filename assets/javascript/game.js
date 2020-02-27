@@ -26,10 +26,10 @@ document.onkeyup = function(event) {
      //Randomly chooses a choice from the options array. This is the computer's guess.
     var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
-    //Defining user choices
+    //Only keeps score when these keys are chosen
     var options = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
     
-    //What happens when a letter is chosen
+    //What happens when a possible letter is chosen
     if (options.indexOf(userGuess) > -1) {
 
         //If user wins
@@ -60,7 +60,7 @@ document.onkeyup = function(event) {
    winsText.textContent = "Wins: " + wins;
    lossesText.textContent = "Losses: " + losses;
    guessesLeftText.textContent = "Guesses Left: " + guessesLeft;
-   letterText.textContent = "Already Guessed: " + userGuess;
+   letterText.textContent = "Already Guessed: " + (letter.join(", "));
 
 
 };
